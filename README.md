@@ -30,3 +30,11 @@
     Files -  
     - ./server/udp_server  
     - ./client/udp_client  
+
+4. Math server:  
+    Perform basic mathematical operation on the one operation expressions sent by the client.  
+
+    Files - 
+    - ./server/math_server  
+    - ./client/tcp_client
+    
