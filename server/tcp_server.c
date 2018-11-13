@@ -3,6 +3,7 @@
 #include <netinet/in.h>
 #include <string.h>
 #include <arpa/inet.h>
+#include <unistd.h>
 
 int main()
 {
@@ -31,7 +32,7 @@ int main()
 
   /* Set port number, using htons function to use proper byte order */
 
-  serverAddr.sin_port = htons(7891);
+  serverAddr.sin_port = htons(16070);
 
   /* Set IP address to localhost */
 

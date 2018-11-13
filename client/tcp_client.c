@@ -3,6 +3,7 @@
 #include <netinet/in.h>
 #include <string.h>
 #include <arpa/inet.h>
+#include <unistd.h>
 
 int main()
 {
@@ -29,7 +30,7 @@ int main()
 
   /* Set port number, using htons function to use proper byte order */
 
-  serverAddr.sin_port = htons(7891);
+  serverAddr.sin_port = htons(16070);
 
   /* Set IP address to localhost */
 
@@ -46,13 +47,15 @@ int main()
   /* ----  Send something to server ---- */
 
   printf("Enter message to send to server = ");
-  scanf("%s", &buffer);
+  scanf("%s", buffer);
 
   send(clientSocket, buffer, 1024, 0);
 
   recv(clientSocket, buffer, 1024, 0);
 
   printf("\nData received from server: %s\n", buffer);
+
+  close(clientSocket);
 
   return 0;
 }
