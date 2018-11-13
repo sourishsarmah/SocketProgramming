@@ -36,7 +36,7 @@ int main(void)
 
     int numrv, mango=30, orange=30, guava=30, banana=30 ,sav;
     int mclientno=0, oclientno=0, gclientno=0, bclientno=0, transno=0;
-    char mtime[20],otime[20],gtime[20],btime[20] ;
+    char mtime[20] = "", otime[20] = "", gtime[20] = "", btime[20] = "" ;
     char new1[50];
     int new,i,j;
     listenfd = socket(AF_INET, SOCK_STREAM, 0);
